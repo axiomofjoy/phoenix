@@ -5,7 +5,7 @@
       "name_pattern": "^chatgpt-4o-latest$",
       "token_prices": [
         {
-          "base_rate": 0,
+          "base_rate": 5e-6,
           "is_prompt": true,
           "token_type": "input"
         },
@@ -443,6 +443,11 @@
           "token_type": "output"
         },
         {
+          "base_rate": 2.5e-8,
+          "is_prompt": true,
+          "token_type": "cache_read"
+        },
+        {
           "base_rate": 7e-7,
           "is_prompt": true,
           "token_type": "audio"
@@ -464,6 +469,11 @@
           "token_type": "output"
         },
         {
+          "base_rate": 3.75e-8,
+          "is_prompt": true,
+          "token_type": "cache_read"
+        },
+        {
           "base_rate": 1e-6,
           "is_prompt": true,
           "token_type": "audio"
@@ -483,6 +493,11 @@
           "base_rate": 6e-7,
           "is_prompt": false,
           "token_type": "output"
+        },
+        {
+          "base_rate": 3.75e-8,
+          "is_prompt": true,
+          "token_type": "cache_read"
         }
       ]
     },
@@ -499,6 +514,11 @@
           "base_rate": 3e-7,
           "is_prompt": false,
           "token_type": "output"
+        },
+        {
+          "base_rate": 1.875e-8,
+          "is_prompt": true,
+          "token_type": "cache_read"
         },
         {
           "base_rate": 7.5e-8,
@@ -522,6 +542,11 @@
           "token_type": "output"
         },
         {
+          "base_rate": 1.875e-8,
+          "is_prompt": true,
+          "token_type": "cache_read"
+        },
+        {
           "base_rate": 7.5e-8,
           "is_prompt": true,
           "token_type": "audio"
@@ -543,6 +568,11 @@
           "token_type": "output"
         },
         {
+          "base_rate": 2.5e-8,
+          "is_prompt": true,
+          "token_type": "cache_read"
+        },
+        {
           "base_rate": 7e-7,
           "is_prompt": true,
           "token_type": "audio"
@@ -562,6 +592,11 @@
           "base_rate": 0.00001,
           "is_prompt": false,
           "token_type": "output"
+        },
+        {
+          "base_rate": 3.125e-7,
+          "is_prompt": true,
+          "token_type": "cache_read"
         }
       ]
     },
@@ -578,6 +613,11 @@
           "base_rate": 2.5e-6,
           "is_prompt": false,
           "token_type": "output"
+        },
+        {
+          "base_rate": 7.5e-8,
+          "is_prompt": true,
+          "token_type": "cache_read"
         },
         {
           "base_rate": 1e-6,
@@ -601,6 +641,11 @@
           "token_type": "output"
         },
         {
+          "base_rate": 2.5e-8,
+          "is_prompt": true,
+          "token_type": "cache_read"
+        },
+        {
           "base_rate": 5e-7,
           "is_prompt": true,
           "token_type": "audio"
@@ -620,6 +665,11 @@
           "base_rate": 6e-7,
           "is_prompt": false,
           "token_type": "output"
+        },
+        {
+          "base_rate": 3.75e-8,
+          "is_prompt": true,
+          "token_type": "cache_read"
         },
         {
           "base_rate": 1e-6,
@@ -643,6 +693,11 @@
           "token_type": "output"
         },
         {
+          "base_rate": 7.5e-8,
+          "is_prompt": true,
+          "token_type": "cache_read"
+        },
+        {
           "base_rate": 1e-6,
           "is_prompt": true,
           "token_type": "audio"
@@ -662,6 +717,11 @@
           "base_rate": 0.00001,
           "is_prompt": false,
           "token_type": "output"
+        },
+        {
+          "base_rate": 3.125e-7,
+          "is_prompt": true,
+          "token_type": "cache_read"
         }
       ]
     },
@@ -678,6 +738,11 @@
           "base_rate": 0.00001,
           "is_prompt": false,
           "token_type": "output"
+        },
+        {
+          "base_rate": 3.125e-7,
+          "is_prompt": true,
+          "token_type": "cache_read"
         }
       ]
     },
@@ -694,6 +759,11 @@
           "base_rate": 0.00001,
           "is_prompt": false,
           "token_type": "output"
+        },
+        {
+          "base_rate": 3.125e-7,
+          "is_prompt": true,
+          "token_type": "cache_read"
         },
         {
           "base_rate": 1.25e-6,
@@ -717,6 +787,11 @@
           "token_type": "output"
         },
         {
+          "base_rate": 3.125e-7,
+          "is_prompt": true,
+          "token_type": "cache_read"
+        },
+        {
           "base_rate": 1.25e-6,
           "is_prompt": true,
           "token_type": "audio"
@@ -738,6 +813,11 @@
           "token_type": "output"
         },
         {
+          "base_rate": 3.125e-7,
+          "is_prompt": true,
+          "token_type": "cache_read"
+        },
+        {
           "base_rate": 1.25e-6,
           "is_prompt": true,
           "token_type": "audio"
@@ -757,6 +837,11 @@
           "base_rate": 0.00001,
           "is_prompt": false,
           "token_type": "output"
+        },
+        {
+          "base_rate": 3.125e-7,
+          "is_prompt": true,
+          "token_type": "cache_read"
         },
         {
           "base_rate": 7e-7,
