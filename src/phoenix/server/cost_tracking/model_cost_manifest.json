@@ -5,7 +5,7 @@
       "name_pattern": "^chatgpt-4o-latest$",
       "token_prices": [
         {
-          "base_rate": 0,
+          "base_rate": 5e-6,
           "is_prompt": true,
           "token_type": "input"
         },
@@ -345,6 +345,58 @@
       ]
     },
     {
+      "name": "claude-haiku-4-5",
+      "name_pattern": "^claude-haiku-4-5$",
+      "token_prices": [
+        {
+          "base_rate": 1e-6,
+          "is_prompt": true,
+          "token_type": "input"
+        },
+        {
+          "base_rate": 5e-6,
+          "is_prompt": false,
+          "token_type": "output"
+        },
+        {
+          "base_rate": 1e-7,
+          "is_prompt": true,
+          "token_type": "cache_read"
+        },
+        {
+          "base_rate": 1.25e-6,
+          "is_prompt": true,
+          "token_type": "cache_write"
+        }
+      ]
+    },
+    {
+      "name": "claude-haiku-4-5-20251001",
+      "name_pattern": "^claude-haiku-4-5-20251001$",
+      "token_prices": [
+        {
+          "base_rate": 1e-6,
+          "is_prompt": true,
+          "token_type": "input"
+        },
+        {
+          "base_rate": 5e-6,
+          "is_prompt": false,
+          "token_type": "output"
+        },
+        {
+          "base_rate": 1e-7,
+          "is_prompt": true,
+          "token_type": "cache_read"
+        },
+        {
+          "base_rate": 1.25e-6,
+          "is_prompt": true,
+          "token_type": "cache_write"
+        }
+      ]
+    },
+    {
       "name": "claude-instant-1",
       "name_pattern": "^claude-instant-1$",
       "token_prices": [
@@ -373,6 +425,58 @@
           "base_rate": 5.51e-6,
           "is_prompt": false,
           "token_type": "output"
+        }
+      ]
+    },
+    {
+      "name": "claude-opus-4-1",
+      "name_pattern": "^claude-opus-4-1$",
+      "token_prices": [
+        {
+          "base_rate": 0.000015,
+          "is_prompt": true,
+          "token_type": "input"
+        },
+        {
+          "base_rate": 0.000075,
+          "is_prompt": false,
+          "token_type": "output"
+        },
+        {
+          "base_rate": 1.5e-6,
+          "is_prompt": true,
+          "token_type": "cache_read"
+        },
+        {
+          "base_rate": 0.00001875,
+          "is_prompt": true,
+          "token_type": "cache_write"
+        }
+      ]
+    },
+    {
+      "name": "claude-opus-4-1-20250805",
+      "name_pattern": "^claude-opus-4-1-20250805$",
+      "token_prices": [
+        {
+          "base_rate": 0.000015,
+          "is_prompt": true,
+          "token_type": "input"
+        },
+        {
+          "base_rate": 0.000075,
+          "is_prompt": false,
+          "token_type": "output"
+        },
+        {
+          "base_rate": 1.5e-6,
+          "is_prompt": true,
+          "token_type": "cache_read"
+        },
+        {
+          "base_rate": 0.00001875,
+          "is_prompt": true,
+          "token_type": "cache_write"
         }
       ]
     },
@@ -429,6 +533,58 @@
       ]
     },
     {
+      "name": "claude-sonnet-4-5",
+      "name_pattern": "^claude-sonnet-4-5$",
+      "token_prices": [
+        {
+          "base_rate": 3e-6,
+          "is_prompt": true,
+          "token_type": "input"
+        },
+        {
+          "base_rate": 0.000015,
+          "is_prompt": false,
+          "token_type": "output"
+        },
+        {
+          "base_rate": 3e-7,
+          "is_prompt": true,
+          "token_type": "cache_read"
+        },
+        {
+          "base_rate": 3.75e-6,
+          "is_prompt": true,
+          "token_type": "cache_write"
+        }
+      ]
+    },
+    {
+      "name": "claude-sonnet-4-5-20250929",
+      "name_pattern": "^claude-sonnet-4-5-20250929$",
+      "token_prices": [
+        {
+          "base_rate": 3e-6,
+          "is_prompt": true,
+          "token_type": "input"
+        },
+        {
+          "base_rate": 0.000015,
+          "is_prompt": false,
+          "token_type": "output"
+        },
+        {
+          "base_rate": 3e-7,
+          "is_prompt": true,
+          "token_type": "cache_read"
+        },
+        {
+          "base_rate": 3.75e-6,
+          "is_prompt": true,
+          "token_type": "cache_write"
+        }
+      ]
+    },
+    {
       "name": "gemini-2.0-flash",
       "name_pattern": "^gemini-2.0-flash(@[a-zA-Z0-9]+)?$",
       "token_prices": [
@@ -441,6 +597,11 @@
           "base_rate": 4e-7,
           "is_prompt": false,
           "token_type": "output"
+        },
+        {
+          "base_rate": 2.5e-8,
+          "is_prompt": true,
+          "token_type": "cache_read"
         },
         {
           "base_rate": 7e-7,
@@ -464,6 +625,11 @@
           "token_type": "output"
         },
         {
+          "base_rate": 3.75e-8,
+          "is_prompt": true,
+          "token_type": "cache_read"
+        },
+        {
           "base_rate": 1e-6,
           "is_prompt": true,
           "token_type": "audio"
@@ -483,6 +649,11 @@
           "base_rate": 6e-7,
           "is_prompt": false,
           "token_type": "output"
+        },
+        {
+          "base_rate": 3.75e-8,
+          "is_prompt": true,
+          "token_type": "cache_read"
         }
       ]
     },
@@ -499,6 +670,11 @@
           "base_rate": 3e-7,
           "is_prompt": false,
           "token_type": "output"
+        },
+        {
+          "base_rate": 1.875e-8,
+          "is_prompt": true,
+          "token_type": "cache_read"
         },
         {
           "base_rate": 7.5e-8,
@@ -522,8 +698,44 @@
           "token_type": "output"
         },
         {
+          "base_rate": 1.875e-8,
+          "is_prompt": true,
+          "token_type": "cache_read"
+        },
+        {
           "base_rate": 7.5e-8,
           "is_prompt": true,
+          "token_type": "audio"
+        }
+      ]
+    },
+    {
+      "name": "gemini-2.0-flash-live-preview-04-09",
+      "name_pattern": "^gemini-2.0-flash-live-preview-04-09$",
+      "token_prices": [
+        {
+          "base_rate": 5e-7,
+          "is_prompt": true,
+          "token_type": "input"
+        },
+        {
+          "base_rate": 2e-6,
+          "is_prompt": false,
+          "token_type": "output"
+        },
+        {
+          "base_rate": 7.5e-8,
+          "is_prompt": true,
+          "token_type": "cache_read"
+        },
+        {
+          "base_rate": 3e-6,
+          "is_prompt": true,
+          "token_type": "audio"
+        },
+        {
+          "base_rate": 0.000012,
+          "is_prompt": false,
           "token_type": "audio"
         }
       ]
@@ -541,6 +753,11 @@
           "base_rate": 4e-7,
           "is_prompt": false,
           "token_type": "output"
+        },
+        {
+          "base_rate": 2.5e-8,
+          "is_prompt": true,
+          "token_type": "cache_read"
         },
         {
           "base_rate": 7e-7,
@@ -562,6 +779,11 @@
           "base_rate": 0.00001,
           "is_prompt": false,
           "token_type": "output"
+        },
+        {
+          "base_rate": 3.125e-7,
+          "is_prompt": true,
+          "token_type": "cache_read"
         }
       ]
     },
@@ -580,7 +802,90 @@
           "token_type": "output"
         },
         {
+          "base_rate": 3e-8,
+          "is_prompt": true,
+          "token_type": "cache_read"
+        },
+        {
           "base_rate": 1e-6,
+          "is_prompt": true,
+          "token_type": "audio"
+        }
+      ]
+    },
+    {
+      "name": "gemini-2.5-flash-image",
+      "name_pattern": "^gemini-2.5-flash-image$",
+      "token_prices": [
+        {
+          "base_rate": 3e-7,
+          "is_prompt": true,
+          "token_type": "input"
+        },
+        {
+          "base_rate": 2.5e-6,
+          "is_prompt": false,
+          "token_type": "output"
+        },
+        {
+          "base_rate": 3e-8,
+          "is_prompt": true,
+          "token_type": "cache_read"
+        },
+        {
+          "base_rate": 1e-6,
+          "is_prompt": true,
+          "token_type": "audio"
+        }
+      ]
+    },
+    {
+      "name": "gemini-2.5-flash-image-preview",
+      "name_pattern": "^gemini-2.5-flash-image-preview$",
+      "token_prices": [
+        {
+          "base_rate": 3e-7,
+          "is_prompt": true,
+          "token_type": "input"
+        },
+        {
+          "base_rate": 0.00003,
+          "is_prompt": false,
+          "token_type": "output"
+        },
+        {
+          "base_rate": 7.5e-8,
+          "is_prompt": true,
+          "token_type": "cache_read"
+        },
+        {
+          "base_rate": 1e-6,
+          "is_prompt": true,
+          "token_type": "audio"
+        }
+      ]
+    },
+    {
+      "name": "gemini-2.5-flash-lite",
+      "name_pattern": "^gemini-2.5-flash-lite$",
+      "token_prices": [
+        {
+          "base_rate": 1e-7,
+          "is_prompt": true,
+          "token_type": "input"
+        },
+        {
+          "base_rate": 4e-7,
+          "is_prompt": false,
+          "token_type": "output"
+        },
+        {
+          "base_rate": 2.5e-8,
+          "is_prompt": true,
+          "token_type": "cache_read"
+        },
+        {
+          "base_rate": 5e-7,
           "is_prompt": true,
           "token_type": "audio"
         }
@@ -601,7 +906,38 @@
           "token_type": "output"
         },
         {
+          "base_rate": 2.5e-8,
+          "is_prompt": true,
+          "token_type": "cache_read"
+        },
+        {
           "base_rate": 5e-7,
+          "is_prompt": true,
+          "token_type": "audio"
+        }
+      ]
+    },
+    {
+      "name": "gemini-2.5-flash-lite-preview-09-2025",
+      "name_pattern": "^gemini-2.5-flash-lite-preview-09-2025$",
+      "token_prices": [
+        {
+          "base_rate": 1e-7,
+          "is_prompt": true,
+          "token_type": "input"
+        },
+        {
+          "base_rate": 4e-7,
+          "is_prompt": false,
+          "token_type": "output"
+        },
+        {
+          "base_rate": 2.5e-8,
+          "is_prompt": true,
+          "token_type": "cache_read"
+        },
+        {
+          "base_rate": 3e-7,
           "is_prompt": true,
           "token_type": "audio"
         }
@@ -620,6 +956,11 @@
           "base_rate": 6e-7,
           "is_prompt": false,
           "token_type": "output"
+        },
+        {
+          "base_rate": 3.75e-8,
+          "is_prompt": true,
+          "token_type": "cache_read"
         },
         {
           "base_rate": 1e-6,
@@ -643,6 +984,37 @@
           "token_type": "output"
         },
         {
+          "base_rate": 7.5e-8,
+          "is_prompt": true,
+          "token_type": "cache_read"
+        },
+        {
+          "base_rate": 1e-6,
+          "is_prompt": true,
+          "token_type": "audio"
+        }
+      ]
+    },
+    {
+      "name": "gemini-2.5-flash-preview-09-2025",
+      "name_pattern": "^gemini-2.5-flash-preview-09-2025$",
+      "token_prices": [
+        {
+          "base_rate": 3e-7,
+          "is_prompt": true,
+          "token_type": "input"
+        },
+        {
+          "base_rate": 2.5e-6,
+          "is_prompt": false,
+          "token_type": "output"
+        },
+        {
+          "base_rate": 7.5e-8,
+          "is_prompt": true,
+          "token_type": "cache_read"
+        },
+        {
           "base_rate": 1e-6,
           "is_prompt": true,
           "token_type": "audio"
@@ -662,6 +1034,11 @@
           "base_rate": 0.00001,
           "is_prompt": false,
           "token_type": "output"
+        },
+        {
+          "base_rate": 1.25e-7,
+          "is_prompt": true,
+          "token_type": "cache_read"
         }
       ]
     },
@@ -678,6 +1055,11 @@
           "base_rate": 0.00001,
           "is_prompt": false,
           "token_type": "output"
+        },
+        {
+          "base_rate": 3.125e-7,
+          "is_prompt": true,
+          "token_type": "cache_read"
         }
       ]
     },
@@ -694,6 +1076,11 @@
           "base_rate": 0.00001,
           "is_prompt": false,
           "token_type": "output"
+        },
+        {
+          "base_rate": 3.125e-7,
+          "is_prompt": true,
+          "token_type": "cache_read"
         },
         {
           "base_rate": 1.25e-6,
@@ -717,6 +1104,11 @@
           "token_type": "output"
         },
         {
+          "base_rate": 3.125e-7,
+          "is_prompt": true,
+          "token_type": "cache_read"
+        },
+        {
           "base_rate": 1.25e-6,
           "is_prompt": true,
           "token_type": "audio"
@@ -736,6 +1128,11 @@
           "base_rate": 0.00001,
           "is_prompt": false,
           "token_type": "output"
+        },
+        {
+          "base_rate": 3.125e-7,
+          "is_prompt": true,
+          "token_type": "cache_read"
         },
         {
           "base_rate": 1.25e-6,
@@ -759,8 +1156,44 @@
           "token_type": "output"
         },
         {
+          "base_rate": 3.125e-7,
+          "is_prompt": true,
+          "token_type": "cache_read"
+        },
+        {
           "base_rate": 7e-7,
           "is_prompt": true,
+          "token_type": "audio"
+        }
+      ]
+    },
+    {
+      "name": "gemini-live-2.5-flash-preview-native-audio-09-2025",
+      "name_pattern": "^gemini-live-2.5-flash-preview-native-audio-09-2025$",
+      "token_prices": [
+        {
+          "base_rate": 3e-7,
+          "is_prompt": true,
+          "token_type": "input"
+        },
+        {
+          "base_rate": 2e-6,
+          "is_prompt": false,
+          "token_type": "output"
+        },
+        {
+          "base_rate": 7.5e-8,
+          "is_prompt": true,
+          "token_type": "cache_read"
+        },
+        {
+          "base_rate": 3e-6,
+          "is_prompt": true,
+          "token_type": "audio"
+        },
+        {
+          "base_rate": 0.000012,
+          "is_prompt": false,
           "token_type": "audio"
         }
       ]
@@ -802,12 +1235,12 @@
       "name_pattern": "^gpt-(35|3.5)-turbo$",
       "token_prices": [
         {
-          "base_rate": 1.5e-6,
+          "base_rate": 5e-7,
           "is_prompt": true,
           "token_type": "input"
         },
         {
-          "base_rate": 2e-6,
+          "base_rate": 1.5e-6,
           "is_prompt": false,
           "token_type": "output"
         }
@@ -1834,6 +2267,37 @@
       ]
     },
     {
+      "name": "gpt-4o-realtime-preview-2025-06-03",
+      "name_pattern": "^gpt-4o-realtime-preview-2025-06-03$",
+      "token_prices": [
+        {
+          "base_rate": 5e-6,
+          "is_prompt": true,
+          "token_type": "input"
+        },
+        {
+          "base_rate": 0.00002,
+          "is_prompt": false,
+          "token_type": "output"
+        },
+        {
+          "base_rate": 2.5e-6,
+          "is_prompt": true,
+          "token_type": "cache_read"
+        },
+        {
+          "base_rate": 0.00004,
+          "is_prompt": true,
+          "token_type": "audio"
+        },
+        {
+          "base_rate": 0.00008,
+          "is_prompt": false,
+          "token_type": "audio"
+        }
+      ]
+    },
+    {
       "name": "gpt-4o-search-preview",
       "name_pattern": "^gpt-4o-search-preview$",
       "token_prices": [
@@ -1892,6 +2356,315 @@
         {
           "base_rate": 6e-6,
           "is_prompt": true,
+          "token_type": "audio"
+        }
+      ]
+    },
+    {
+      "name": "gpt-5",
+      "name_pattern": "^gpt-5$",
+      "token_prices": [
+        {
+          "base_rate": 1.25e-6,
+          "is_prompt": true,
+          "token_type": "input"
+        },
+        {
+          "base_rate": 0.00001,
+          "is_prompt": false,
+          "token_type": "output"
+        },
+        {
+          "base_rate": 1.25e-7,
+          "is_prompt": true,
+          "token_type": "cache_read"
+        }
+      ]
+    },
+    {
+      "name": "gpt-5-2025-08-07",
+      "name_pattern": "^gpt-5-2025-08-07$",
+      "token_prices": [
+        {
+          "base_rate": 1.25e-6,
+          "is_prompt": true,
+          "token_type": "input"
+        },
+        {
+          "base_rate": 0.00001,
+          "is_prompt": false,
+          "token_type": "output"
+        },
+        {
+          "base_rate": 1.25e-7,
+          "is_prompt": true,
+          "token_type": "cache_read"
+        }
+      ]
+    },
+    {
+      "name": "gpt-5-chat",
+      "name_pattern": "^gpt-5-chat$",
+      "token_prices": [
+        {
+          "base_rate": 1.25e-6,
+          "is_prompt": true,
+          "token_type": "input"
+        },
+        {
+          "base_rate": 0.00001,
+          "is_prompt": false,
+          "token_type": "output"
+        },
+        {
+          "base_rate": 1.25e-7,
+          "is_prompt": true,
+          "token_type": "cache_read"
+        }
+      ]
+    },
+    {
+      "name": "gpt-5-chat-latest",
+      "name_pattern": "^gpt-5-chat-latest$",
+      "token_prices": [
+        {
+          "base_rate": 1.25e-6,
+          "is_prompt": true,
+          "token_type": "input"
+        },
+        {
+          "base_rate": 0.00001,
+          "is_prompt": false,
+          "token_type": "output"
+        },
+        {
+          "base_rate": 1.25e-7,
+          "is_prompt": true,
+          "token_type": "cache_read"
+        }
+      ]
+    },
+    {
+      "name": "gpt-5-codex",
+      "name_pattern": "^gpt-5-codex$",
+      "token_prices": [
+        {
+          "base_rate": 1.25e-6,
+          "is_prompt": true,
+          "token_type": "input"
+        },
+        {
+          "base_rate": 0.00001,
+          "is_prompt": false,
+          "token_type": "output"
+        },
+        {
+          "base_rate": 1.25e-7,
+          "is_prompt": true,
+          "token_type": "cache_read"
+        }
+      ]
+    },
+    {
+      "name": "gpt-5-mini",
+      "name_pattern": "^gpt-5-mini$",
+      "token_prices": [
+        {
+          "base_rate": 2.5e-7,
+          "is_prompt": true,
+          "token_type": "input"
+        },
+        {
+          "base_rate": 2e-6,
+          "is_prompt": false,
+          "token_type": "output"
+        },
+        {
+          "base_rate": 2.5e-8,
+          "is_prompt": true,
+          "token_type": "cache_read"
+        }
+      ]
+    },
+    {
+      "name": "gpt-5-mini-2025-08-07",
+      "name_pattern": "^gpt-5-mini-2025-08-07$",
+      "token_prices": [
+        {
+          "base_rate": 2.5e-7,
+          "is_prompt": true,
+          "token_type": "input"
+        },
+        {
+          "base_rate": 2e-6,
+          "is_prompt": false,
+          "token_type": "output"
+        },
+        {
+          "base_rate": 2.5e-8,
+          "is_prompt": true,
+          "token_type": "cache_read"
+        }
+      ]
+    },
+    {
+      "name": "gpt-5-nano",
+      "name_pattern": "^gpt-5-nano$",
+      "token_prices": [
+        {
+          "base_rate": 5e-8,
+          "is_prompt": true,
+          "token_type": "input"
+        },
+        {
+          "base_rate": 4e-7,
+          "is_prompt": false,
+          "token_type": "output"
+        },
+        {
+          "base_rate": 5e-9,
+          "is_prompt": true,
+          "token_type": "cache_read"
+        }
+      ]
+    },
+    {
+      "name": "gpt-5-nano-2025-08-07",
+      "name_pattern": "^gpt-5-nano-2025-08-07$",
+      "token_prices": [
+        {
+          "base_rate": 5e-8,
+          "is_prompt": true,
+          "token_type": "input"
+        },
+        {
+          "base_rate": 4e-7,
+          "is_prompt": false,
+          "token_type": "output"
+        },
+        {
+          "base_rate": 5e-9,
+          "is_prompt": true,
+          "token_type": "cache_read"
+        }
+      ]
+    },
+    {
+      "name": "gpt-5-pro",
+      "name_pattern": "^gpt-5-pro$",
+      "token_prices": [
+        {
+          "base_rate": 0.000015,
+          "is_prompt": true,
+          "token_type": "input"
+        },
+        {
+          "base_rate": 0.00012,
+          "is_prompt": false,
+          "token_type": "output"
+        }
+      ]
+    },
+    {
+      "name": "gpt-5-pro-2025-10-06",
+      "name_pattern": "^gpt-5-pro-2025-10-06$",
+      "token_prices": [
+        {
+          "base_rate": 0.000015,
+          "is_prompt": true,
+          "token_type": "input"
+        },
+        {
+          "base_rate": 0.00012,
+          "is_prompt": false,
+          "token_type": "output"
+        }
+      ]
+    },
+    {
+      "name": "gpt-realtime",
+      "name_pattern": "^gpt-realtime$",
+      "token_prices": [
+        {
+          "base_rate": 4e-6,
+          "is_prompt": true,
+          "token_type": "input"
+        },
+        {
+          "base_rate": 0.000016,
+          "is_prompt": false,
+          "token_type": "output"
+        },
+        {
+          "base_rate": 4e-7,
+          "is_prompt": true,
+          "token_type": "cache_read"
+        },
+        {
+          "base_rate": 0.000032,
+          "is_prompt": true,
+          "token_type": "audio"
+        },
+        {
+          "base_rate": 0.000064,
+          "is_prompt": false,
+          "token_type": "audio"
+        }
+      ]
+    },
+    {
+      "name": "gpt-realtime-2025-08-28",
+      "name_pattern": "^gpt-realtime-2025-08-28$",
+      "token_prices": [
+        {
+          "base_rate": 4e-6,
+          "is_prompt": true,
+          "token_type": "input"
+        },
+        {
+          "base_rate": 0.000016,
+          "is_prompt": false,
+          "token_type": "output"
+        },
+        {
+          "base_rate": 4e-7,
+          "is_prompt": true,
+          "token_type": "cache_read"
+        },
+        {
+          "base_rate": 0.000032,
+          "is_prompt": true,
+          "token_type": "audio"
+        },
+        {
+          "base_rate": 0.000064,
+          "is_prompt": false,
+          "token_type": "audio"
+        }
+      ]
+    },
+    {
+      "name": "gpt-realtime-mini",
+      "name_pattern": "^gpt-realtime-mini$",
+      "token_prices": [
+        {
+          "base_rate": 6e-7,
+          "is_prompt": true,
+          "token_type": "input"
+        },
+        {
+          "base_rate": 2.4e-6,
+          "is_prompt": false,
+          "token_type": "output"
+        },
+        {
+          "base_rate": 0.00001,
+          "is_prompt": true,
+          "token_type": "audio"
+        },
+        {
+          "base_rate": 0.00002,
+          "is_prompt": false,
           "token_type": "audio"
         }
       ]
@@ -2261,6 +3034,38 @@
           "base_rate": 5e-7,
           "is_prompt": true,
           "token_type": "cache_read"
+        }
+      ]
+    },
+    {
+      "name": "openai.gpt-oss-120b-1:0",
+      "name_pattern": "^openai.gpt-oss-120b-1:0$",
+      "token_prices": [
+        {
+          "base_rate": 1.5e-7,
+          "is_prompt": true,
+          "token_type": "input"
+        },
+        {
+          "base_rate": 6e-7,
+          "is_prompt": false,
+          "token_type": "output"
+        }
+      ]
+    },
+    {
+      "name": "openai.gpt-oss-20b-1:0",
+      "name_pattern": "^openai.gpt-oss-20b-1:0$",
+      "token_prices": [
+        {
+          "base_rate": 7e-8,
+          "is_prompt": true,
+          "token_type": "input"
+        },
+        {
+          "base_rate": 3e-7,
+          "is_prompt": false,
+          "token_type": "output"
         }
       ]
     }
