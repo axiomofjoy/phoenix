@@ -178,6 +178,7 @@ export function useAgentChat({
   const {
     messages,
     sendMessage,
+    regenerate,
     status,
     error,
     addToolOutput,
@@ -492,9 +493,17 @@ export function useAgentChat({
     [messages, pendingDraftUserMessage]
   );
 
+  const retryMessage = useCallback(() => {
+    if (!sessionId || !chatInstance || isRequestActive(chatInstance.status)) {
+      return;
+    }
+    void regenerate();
+  }, [chatInstance, regenerate, sessionId]);
+
   return {
     messages: displayedMessages,
     sendMessage: handleSendMessage,
+    retryMessage,
     stop: handleStopWithToolCleanup,
     status: pendingDraftUserMessage ? "submitted" : status,
     error,
@@ -514,6 +523,7 @@ export function useAgentChat({
       message: { text: string },
       options?: { body?: AgentChatRequestBodyPatch }
     ) => void;
+    retryMessage: () => void;
     stop: () => Promise<void>;
     status: ChatStatus;
     error: Error | undefined;

@@ -342,13 +342,6 @@ function getLatestMessageId({
   return messages.findLast((message) => message.role === role)?.id;
 }
 
-function getMessageText(message: AgentUIMessage): string {
-  return message.parts
-    .filter((part) => part.type === "text")
-    .map((part) => part.text)
-    .join("");
-}
-
 const COMPACTION_SUMMARY_SECTIONS = [
   ["objectives", "Objectives"],
   ["constraints_and_preferences", "Constraints and preferences"],
@@ -450,6 +443,7 @@ export function ChatView({
   sessionId,
   messages,
   sendMessage,
+  retryMessage,
   stop,
   status,
   error,
@@ -476,6 +470,8 @@ export function ChatView({
     message: { text: string },
     options?: { body?: Record<string, unknown> }
   ) => void;
+  /** Retries the failed assistant response without truncating session history. */
+  retryMessage?: () => void;
   stop: () => Promise<void>;
   status: ChatStatus;
   error: Error | undefined;
@@ -702,38 +698,6 @@ export function ChatView({
     }
   };
 
-  const retryUserMessage = async (message: AgentUIMessage | undefined) => {
-    if (message?.role !== "user") {
-      return;
-    }
-    const messageText = getMessageText(message).trim();
-    if (!messageText) {
-      return;
-    }
-    // The server-side truncation must land before re-sending, or the resent
-    // request would still carry the interrupted user turn.
-    setHistoryActionError(null);
-    try {
-      const restoredInput = await rewindToMessage?.(message.id);
-      if (restoredInput == null) {
-        return;
-      }
-      void scrollToBottom();
-      sendMessage({ text: messageText });
-    } catch (error) {
-      setHistoryActionError({
-        title: "Conversation could not be rewound",
-        message:
-          error instanceof Error
-            ? error.message
-            : "An unexpected error occurred.",
-      });
-    }
-  };
-
-  const handleRetryFailedMessage = () =>
-    retryUserMessage(messages.findLast((message) => message.role === "user"));
-
   useLayoutEffect(() => {
     if (
       !autoFocusInput ||
@@ -848,9 +812,7 @@ export function ChatView({
                       role: "user",
                     })}
                     canFork
-                    onRetry={
-                      rewindToMessage ? handleRetryFailedMessage : undefined
-                    }
+                    onRetry={retryMessage}
                     onRewind={onRewindRequest}
                   />
                 )}

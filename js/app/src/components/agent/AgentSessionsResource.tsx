@@ -489,6 +489,7 @@ function AgentChatController({
   const {
     messages,
     sendMessage,
+    retryMessage,
     stop,
     status,
     error,
@@ -520,6 +521,7 @@ function AgentChatController({
       sessionId={sessionId}
       messages={messages}
       sendMessage={sendMessage}
+      retryMessage={retryMessage}
       stop={stop}
       status={status}
       error={error}

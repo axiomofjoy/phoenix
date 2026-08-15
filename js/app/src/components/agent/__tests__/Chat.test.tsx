@@ -100,6 +100,7 @@ function renderChatView(
     initialDraftInputBySessionId,
     isDraftSessionTemporary,
     sendMessage = vi.fn<ChatViewSendMessage>(),
+    retryMessage,
     compactSession = vi.fn<ChatViewCompactSession>(),
     isCompacting = false,
     compactionStatus,
@@ -119,6 +120,7 @@ function renderChatView(
     initialDraftInputBySessionId?: Record<string, string>;
     isDraftSessionTemporary?: boolean;
     sendMessage?: ChatViewSendMessage;
+    retryMessage?: () => void;
     compactSession?: ChatViewCompactSession;
     isCompacting?: boolean;
     compactionStatus?: string | null;
@@ -175,6 +177,7 @@ function renderChatView(
               sessionId={sessionId}
               messages={chatMessages}
               sendMessage={sendMessage}
+              retryMessage={retryMessage}
               stop={async () => undefined}
               status={status}
               error={error}
@@ -643,14 +646,14 @@ describe("ChatView", () => {
     expect(clearOperationError).toHaveBeenCalledOnce();
   });
 
-  it("truncates and resends the last user message when retrying a failed turn", async () => {
-    const sendMessage = vi.fn<ChatViewSendMessage>();
-    const rewindToMessage = vi.fn().mockResolvedValue("What happened?");
+  it("regenerates without rewinding when retrying a failed turn", async () => {
+    const retryMessage = vi.fn();
+    const rewindToMessage = vi.fn();
     renderChatView(root, {
       chatMessages: messages,
       error: new Error("provider unavailable"),
       status: "error",
-      sendMessage,
+      retryMessage,
       rewindToMessage,
       forkFromMessage: vi.fn(),
     });
@@ -664,8 +667,8 @@ describe("ChatView", () => {
       retryButton?.click();
     });
 
-    expect(rewindToMessage).toHaveBeenCalledWith("user-message");
-    expect(sendMessage).toHaveBeenCalledWith({ text: "What happened?" });
+    expect(retryMessage).toHaveBeenCalledOnce();
+    expect(rewindToMessage).not.toHaveBeenCalled();
     expect(container.textContent).toContain("Show technical details");
     expect(container.textContent).toContain("provider unavailable");
   });
